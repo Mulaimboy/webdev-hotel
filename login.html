@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="login.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <title>Login</title>
+</head>
+<body>
+  <div class="con">
+    <fieldset>
+      <h1>Log in</h1>
+      <p class="login-text">Login using username and password</p>
+   
+      <form id="userinfo">
+        <div class="username">
+          <span class="input-item"><i class="fa fa-user-circle"></i></span>
+          <input class="form-input" id="username" placeholder="@Username" type="text" required />
+        </div>
+        <br />
+        <div class="password">
+          <span><i class="fa fa-key"></i></span>
+          <input class="form-input" id="pwd" type="password" placeholder="Password" required />
+          <span><i class="fa fa-eye" aria-hidden="true" role="button" id="eye"></i></span>
+        </div>
+        <br />
+
+        <!-- Button row: Login & Google side by side -->
+        <div class="login-row">
+          <button onclick="handleLogin(event)" type="submit" class="log-in">Log in</button>
+          <button type="button" class="google-btn">
+            <i class="fa-brands fa-google"></i> Google
+          </button>
+        </div>
+      </form>
+
+      <div class="other">
+        <button class="Forget">Forget Password!</button>
+        <a href="signup.html" class="sign-up">
+          Sign Up <i class="fa fa-user-plus" aria-hidden="true" style="margin-left: 5px;"></i>
+        </a>
+      </div>
+    </fieldset>
+  </div>
+</body>
+<script>
+    function handleLogin(event) {
+      event.preventDefault(); // Prevent form from submitting
+  
+     
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("pwd").value.trim();
+  
+      // Simple validation
+      if (username === "" || password === "") {
+        alert("Please fill in both fields.");
+      } else {
+        alert(`Login successful!\nUsername: ${username}\nPassword: ${password}`);
+        // Here you can redirect or call an API if needed
+      }
+    }
+  </script>
+</html>

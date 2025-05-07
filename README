@@ -1,0 +1,14 @@
+Script 1 and 2:
+test_login_xpath.py
+test_login_cssselector.py
+
+just run using vscode normally it should open up  the html on Chrome and an alert will show 
+since no backend has been implemented
+
+
+Script 3 and 4:
+(test_registration_xpath.py)
+(test_registration_css.py)
+
+just run using vscode normally it should open up  the html on Chrome and an alert will show 
+since no backend has been implemented

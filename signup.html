@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="signup.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <title>Sign Up</title>
+</head>
+<body>
+  <div class="con">
+    <fieldset>
+      <h1>Register Now!!</h1>
+      <p class="login-text">Create your experience </p>
+
+      <form id="registerForm">
+        <div class="input-group">
+          <span><i class="fa fa-envelope"></i></span>
+          <input id="email" class="form-input" type="email" placeholder="Email" required />
+        </div>
+        <br />
+        <div class="input-group">
+          <span><i class="fa fa-user-circle"></i></span>
+          <input id="username" class="form-input" type="text" placeholder="Username" required />
+        </div>
+        <br />
+        <div class="input-group">
+          <span><i class="fa fa-lock"></i></span>
+          <input id="pwd" class="form-input" type="password" placeholder="Password" required />
+        </div>
+        <br />
+        <div class="input-group">
+          <span><i class="fa fa-lock"></i></span>
+          <input id="con-pwd" class="form-input" type="password" placeholder="Confirm Password" required />
+        </div>
+        <br />
+        <button type="submit" class="register-btn">Register</button>
+      </form>
+
+      <div class="other">
+        <button class="log-in">
+          Log In <i class="fa fa-sign-in-alt" style="margin-left: 5px;"></i>
+        </button>
+        <button class="google">
+          <i class="fab fa-google" style="margin-right: 5px;"></i> Continue with Google
+        </button>
+      </div>
+    </fieldset>
+  </div>
+</body>
+
+<script>
+    // Add event listener to the form instead of the button directly
+    document.getElementById("registerForm").addEventListener("submit", handleregister);
+
+    function handleregister(event){
+        event.preventDefault(); // Prevent the form from submitting normally
+
+        const username = document.getElementById("username").value.trim();
+        const passwrd = document.getElementById("pwd").value.trim();
+        const con_passwrd = document.getElementById("con-pwd").value.trim();
+        const email = document.getElementById("email").value.trim();
+
+        if (username === "" || passwrd === "" || con_passwrd === "" || email === "") {
+            alert("Please fill in all fields.");
+        } else if (passwrd !== con_passwrd) {
+            alert("Passwords do not match.");
+        } else {
+            alert(`Registration successful!\nUsername: ${username}\nPassword: ${passwrd}\nEmail: ${email}`);
+            // Here you can redirect or call an API if needed
+        }
+    }
+</script>
+</html>

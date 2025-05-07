@@ -1,0 +1,19 @@
+1. XPath for selecting an input field with id username:
+   XPath: //input[@id='username']
+   CSS Selector: input#username
+
+2. XPath for selecting a button with class submit-btn:
+   XPath: //button[@class='submit-btn']
+   CSS Selector: button.submit-btn
+
+3. XPath for selecting the 2nd <li> inside a <ul> with class nav:
+   XPath: //ul[@class='nav']/li[2]
+   CSS Selector: ul.nav > li:nth-child(2)
+
+4. XPath for selecting any <input> whose placeholder contains the word "email":
+   XPath: //input[contains(@placeholder, 'email')]
+   CSS Selector: input[placeholder*='email']
+
+5. XPath for selecting a link (<a>) inside a <footer> tag:
+   XPath: //footer//a
+   CSS Selector: footer a

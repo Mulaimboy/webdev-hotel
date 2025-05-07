@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="homepage.css">
+    
+        <!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
+</head>
+<body>
+    <header class = "header">
+        <a href="#" class="logo"><i class="fas fa-hotel"></i>Hotel</a>
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#about">about</a>
+            <a href="#room">room</a>
+            <a href="#gallery">gallery</a>
+            <a href="#review">review</a> 
+            <a href="#faq">faq</a>
+            <a href="#reservation" class="btn">book us</a>
+        </nav>
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+    </header>
+    <!--navbar end-->
+    <!--Home page start-->
+
+    <section class="home" id ="home">
+        <div class="swiper home-slider">
+            <div  class="swiper-wrapper">
+                <div class="swiper-slide slide" style="background: url(/Se-IMAGES/hotel1\ \(1\).jpg) no-repeat;">
+                    <div class="content">
+                        <h3>its where Dreams come true</h3>
+                        <a href="#" class="btn">visit us</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide" style="background: url(/Se-IMAGES/window-5268702_1280.jpg) no-repeat;">
+                    <div class="content">
+                        <h3>its where Dreams come true</h3>
+                        <a href="#" class="btn">visit us</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide" style="background: url(/Se-IMAGES/bed-4343382_1280.jpg) no-repeat;">
+                    <div class="content">
+                        <h3>its where Dreams come true</h3>
+                        <a href="#" class="btn">visit us</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide" style="background: url(/Se-IMAGES/breakfast.jpg) no-repeat;">
+                    <div class="content">
+                        <h3>its where Dreams come true</h3>
+                        <a href="#" class="btn">visit us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <section class="availability">
+        <form action="">
+            <div class="box">
+                <p>check in <span>*</span> </p>
+                <input type="date" class="input">
+            </div>
+            <div class="box">
+                <p>check out<span>*</span> </p>
+                <input type="date" class="input">
+            </div>
+            <div class="box">
+                <p>Adults<span>*</span> </p>
+                <select name="adults" class="input">
+                    <option value="1">1 adult</option>
+                    <option value="2">2 adults</option>
+                    <option value="3">3 adults</option>
+                    <option value="4">4 adults   </option>
+                </select>
+            </div>
+            <div class="box">
+                <p>Children<span>*</span> </p>
+                <select name="children" class="input">
+                    <option value="1">1 child</option>
+                    <option value="2">2 children</option>
+                    <option value="3">3 children</option>
+                    <option value="4">4 children</option>
+                </select>
+            </div>
+            <div class="box">
+                <p>Rooms<span>*</span> </p>
+                <select name="rooms" class="input">
+                    <option value="1">1 Room</option>
+                    <option value="2">2 Rooms</option>
+                    <option value="3">3 Rooms</option>
+                    <option value="4">4 Rooms</option>
+                </select>
+            </div>
+            <input type="submit" value="check availability" class="btn">
+
+        </form>
+    </section>
+
+    <!--about us-->
+
+    <section class="about" id="about">
+        <div class="row">
+            <div class="image">
+                <img src="Se-IMAGES/interior-3804121_1280.jpg" alt="#">
+            </div>
+            <div class="content">
+                <h3>about us</h3>
+                <p>Welcome to our hotel, where comfort meets elegance. Nestled in the heart of the city, we offer a serene escape with modern amenities, luxurious rooms, and personalized service designed to make your stay unforgettable.</p>
+                <p>Whether you're traveling for business or leisure, our team is dedicated to providing a warm, welcoming atmosphere. From gourmet dining to relaxing spaces, we ensure every moment with us is nothing short of exceptional.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!--rooms-->
+
+    <section class="room" id="room">
+        <h1 class="heading"> our rooms</h1>
+        <div class="swiper room-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <span class="price">$69.69</span>
+                        <img src="Se-IMAGES/hotel2.jpg" alt="#">
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                    </div>
+                    <div class="content">
+                        <h3>exclusive room</h3>
+                        <p><p>Our deluxe room offers a blend of style and comfort, featuring a plush king-sized bed, modern en-suite bathroom, high-speed Wi-Fi, flat-screen TV, and a private balcony with stunning views — perfect for both relaxation and work.</p>
+                    </p>
+                    <a href="#" class="btn">Book now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper room-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <span class="price">$25.99</span>
+                        <img src="Se-IMAGES/hotel3.jpg" alt="#">
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                    </div>
+                    <div class="content">
+                        <h3>exclusive room</h3>
+                        <p><p>Our deluxe room offers a blend of style and comfort, featuring a plush king-sized bed, modern en-suite bathroom, high-speed Wi-Fi, flat-screen TV, and a private balcony with stunning views — perfect for both relaxation and work.</p>
+                    </p>
+                    <a href="#" class="btn">Book now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper room-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <span class="price">$15.99</span>
+                        <img src="Se-IMAGES/living-room-1835923_1280.jpg" alt="#">
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                    </div>
+                    <div class="content">
+                        <h3>exclusive room</h3>
+                        <p><p>Our deluxe room offers a blend of style and comfort, featuring a plush king-sized bed, modern en-suite bathroom, high-speed Wi-Fi, flat-screen TV, and a private balcony with stunning views — perfect for both relaxation and work.</p>
+                    </p>
+                    <a href="#" class="btn">Book now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+</body>
+<script src="homepage.js" defer></script>
+</html>

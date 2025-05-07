@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <link rel = "stylesheet" href="payment.css">
+    <title>Payment-GateAway</title>
+</head> 
+<body>
+<div class ="payment-container">
+    <form action="#">
+        <div class="payment-wrapper">
+        <div class ="billing-info">
+            <h3 class="section-title">Billing Address</h3>
+            
+            <label for="name">Full name:</label>
+            <input type="text"  id="name" placeholder="Enter your Name" required>
+
+            <label for="email">Email:</label>
+            <input type="text"  id="email" placeholder="Enter your Email" required>
+
+            <label for="address">Address:</label>
+            <input type="text"  id="address" placeholder="Enter your Address" required>
+
+            <label for="country">Country:</label>
+            <input type="text"  id="country" placeholder="Enter your Country" required>
+
+            <div class="input-group">
+                <div class="input-item">
+                    <label for="state">State:</label>
+                    <input type="text"  id="State" placeholder="Enter your State" required>
+                </div>
+                
+                <div class="input-item">
+                    <label for="code">Postal Code</label>
+                    <input type="number"  id="code" placeholder="Enter your Postal Code" required>
+                </div>
+            </div>
+        </div>
+        <div class="payment-info">
+            <h3 class="section-title">Payment</h3>
+  
+            <label>Card Accepted:</label>
+            <div class="card-images">
+              <a href="#">
+                <img src="Se-IMAGES/paypal.jpeg" alt="paypal" class="card-icon">
+              </a>
+  
+              <a href="#">
+                <img src="Se-IMAGES/amerrican-express.png" alt="american express" class="card-icon">
+              </a>
+  
+              <a href="#">
+                <img src="Se-IMAGES/visa.jpg" alt="visa" class="card-icon">
+              </a>
+  
+              <a href="#">
+                <img src="Se-IMAGES/master_card.png" alt="master card" class="card-icon">
+              </a>
+            </div>
+  
+            <label for="cardholder">Cardholder Name:</label>
+            <input type="text" id="cardholder" placeholder="Enter Cardholder Name" required>
+  
+            <label for="card-number">Card Number:</label>
+            <input type="number" id="card-number" placeholder="Enter Your Card Number" required>
+  
+            <label for="cvc">CVC:</label>
+            <input type="number" id="cvc" placeholder="Enter Your Card Verification Code" required>
+  
+            <div class="input-group">
+              <div class="input-item">
+                <label for="month">Expired Month:</label>
+                <input type="text" id="month" placeholder="Expired Month" required>
+              </div>
+  
+              <div class="input-item">
+                <label for="year">Expired Year:</label>
+                <input type="number" id="year" placeholder="Expired Year" required>
+              </div>
+            </div>
+          </div>
+    </div>
+    </form>
+</div>
+    
+</body>
+<script>
+    document.querySelector("form").addEventListener("submit", function (e) {
+        e.preventDefault(); // prevent form submission for validation
+    
+        let isValid = true;
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+        // Helper function to show alert and mark field invalid
+        function invalidate(input, message) {
+            alert(message);
+            input.focus();
+            input.style.borderColor = "red";
+            isValid = false;
+        }
+    
+        // Get form elements
+        const name = document.getElementById("name");
+        const email = document.getElementById("email");
+        const address = document.getElementById("address");
+        const country = document.getElementById("country");
+        const state = document.getElementById("State");
+        const code = document.getElementById("code");
+        const cardholder = document.getElementById("cardholder");
+        const cardNumber = document.getElementById("card-number");
+        const cvc = document.getElementById("cvc");
+        const month = document.getElementById("month");
+        const year = document.getElementById("year");
+    
+        // Reset all borders
+        document.querySelectorAll("input").forEach(input => input.style.borderColor = "#ccc");
+    
+        // Validate required fields
+        if (!name.value.trim()) return invalidate(name, "Full name is required");
+        if (!email.value.trim() || !emailPattern.test(email.value)) return invalidate(email, "Please enter a valid email");
+        if (!address.value.trim()) return invalidate(address, "Address is required");
+        if (!country.value.trim()) return invalidate(country, "Country is required");
+        if (!state.value.trim()) return invalidate(state, "State is required");
+        if (!code.value.trim() || isNaN(code.value)) return invalidate(code, "Postal Code must be a number");
+        if (!cardholder.value.trim()) return invalidate(cardholder, "Cardholder name is required");
+    
+        if (!cardNumber.value.trim() || cardNumber.value.length < 13 || cardNumber.value.length > 19)
+            return invalidate(cardNumber, "Card number must be between 13 and 19 digits");
+    
+        if (!cvc.value.trim() || !/^\d{3,4}$/.test(cvc.value))
+            return invalidate(cvc, "CVC must be 3 or 4 digits");
+    
+        const monthValue = parseInt(month.value);
+        if (!month.value.trim() || isNaN(monthValue) || monthValue < 1 || monthValue > 12)
+            return invalidate(month, "Enter a valid expiration month (1–12)");
+    
+        const yearValue = parseInt(year.value);
+        const currentYear = new Date().getFullYear();
+        if (!year.value.trim() || isNaN(yearValue) || yearValue < currentYear)
+            return invalidate(year, "Enter a valid expiration year");
+    
+        if (isValid) {
+            alert("Payment Submitted Successfully!");
+            // You can now submit the form using e.target.submit() or process data
+            // e.target.submit(); // Uncomment if you're ready to send data to server
+        }
+    });
+    </script>
+    
+</html>
