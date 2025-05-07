@@ -281,3 +281,15 @@ border-radius: .5rem;
     padding: .5rem 0;
     line-height: 1.5;
 }
+
+/*footer*/
+
+.footer{
+    background: var(--secondary);
+
+}
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+    gap: 1.5rem;
+}
