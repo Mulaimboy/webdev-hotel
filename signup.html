@@ -21,7 +21,7 @@
         <br />
         <div class="input-group">
           <span><i class="fa fa-user-circle"></i></span>
-          <input id="username" class="form-input" type="text" placeholder="Username" required />
+          <input id="username" class="form-input" type="text" placeholder="Name" required />
         </div>
         <br />
         <div class="input-group">
@@ -32,6 +32,11 @@
         <div class="input-group">
           <span><i class="fa fa-lock"></i></span>
           <input id="con-pwd" class="form-input" type="password" placeholder="Confirm Password" required />
+        </div>
+        <br />
+        <div class="input-group">
+          <span><i class="fa fa-phone"></i></span>
+          <input id="phone" class="form-input" type="tel" placeholder="Phone Number" required />
         </div>
         <br />
         <button type="submit" class="register-btn">Register</button>
@@ -60,13 +65,18 @@
         const passwrd = document.getElementById("pwd").value.trim();
         const con_passwrd = document.getElementById("con-pwd").value.trim();
         const email = document.getElementById("email").value.trim();
+        const phone = document.getElementById("phone").value.trim();
 
-        if (username === "" || passwrd === "" || con_passwrd === "" || email === "") {
+        const phonePattern = /^[0-9]{10}$/; // Example phone number validation (10 digits)
+
+        if (username === "" || passwrd === "" || con_passwrd === "" || email === "" || phone === "") {
             alert("Please fill in all fields.");
         } else if (passwrd !== con_passwrd) {
             alert("Passwords do not match.");
+        } else if (!phonePattern.test(phone)) {
+            alert("Please enter a valid 10-digit phone number.");
         } else {
-            alert(`Registration successful!\nUsername: ${username}\nPassword: ${passwrd}\nEmail: ${email}`);
+            alert(`Registration successful!\nUsername: ${username}\nPassword: ${passwrd}\nEmail: ${email}\nPhone: ${phone}`);
             // Here you can redirect or call an API if needed
         }
     }

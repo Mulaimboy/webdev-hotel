@@ -6,26 +6,24 @@
 }
 body {
     background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
-background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
-background-attachment: fixed;
-  background-repeat: no-repeat;
-
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     font-family: 'Vibur', cursive;
     font-family: 'Abel', sans-serif;
-opacity: .95;
-/* background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%); */
+    opacity: .95;
 }
 .con {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-h1{
+}
+h1 {
     margin-top: 30px;
 }
 
-fieldset{
+fieldset {
     box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
     background-image: linear-gradient(-225deg, #E3FDF5 50%, #FFE6FA 50%);
     display: flex;
@@ -35,28 +33,23 @@ fieldset{
     height: 500px;
     border: none;
 }
-.username{
+.email {
     margin-top: 30px;
 }
-.form-input{
+.form-input {
     width: 240px;
     height: 50px;
-  
     margin-top: 2%;
     padding: 15px;
-    
     font-size: 16px;
     font-family: 'Abel', sans-serif;
     color: #5E6472;
-  
     outline: none;
     border: none;
-  
     border-radius: 0px 5px 5px 0px;
     transition: 0.2s linear;
-    
 }
-.login-text{
+.login-text {
     margin-top: 12px;
 }
 
@@ -64,15 +57,13 @@ input:focus {
     transform: translateX(-2px);
     border-radius: 5px;
 }
-button{
+button {
     color: #252537;
-  
     width: 280px;
     height: 50px;
     background: #fff;
     outline: none;
     border: none;
-  
     cursor: pointer;
     text-align: center;
     transition: all 0.2s linear;
@@ -81,52 +72,48 @@ button{
     margin-top: 10px;
     display: flex;
     justify-content: center;
-    gap: 10px; /* adds spacing between the two buttons */
-  }
-  .other button {
+    gap: 10px;
+}
+.other button {
     width: 130px;
     height: 40px;
     font-size: 14px;
-  }
-  .other button,
-  .log-in {
+}
+.other button,
+.log-in {
     background-color: #fff;
     color: #252537;
     border: none;
     border-radius: 5px;
     transition: 0.2s ease-in-out;
-  }
-  
-  .other button:hover,
-  .log-in:hover {
+}
+.other button:hover,
+.log-in:hover {
     background-color: #f0f0f0;
-  }
-  
-  /* ✅ Fix: Override specifically for .sign-up */
-  button.sign-up {
-    background-color: #B8F2E6 !important; /* forces it to apply */
+}
+button.sign-up {
+    background-color: #B8F2E6 !important;
     color: #252537;
-  }
-button.Forget{
+}
+button.Forget {
     background-color: transparent;
 }
-  
 
 .login-row {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin-bottom: 10px;
-  }
-  
-  .log-in {
-    background-color: #ffb6c1; /* Soft pink that matches the background */
+}
+
+.log-in {
+    background-color: #ffb6c1;
     width: 130px;
     color: #252537;
     border-radius: 5px;
-  }
-  
-  .google-btn {
+}
+
+.google-btn {
     background-color: #fff;
     width: 130px;
     height: 50px;
@@ -139,13 +126,13 @@ button.Forget{
     justify-content: center;
     gap: 8px;
     transition: 0.2s ease-in-out;
-  }
-  
-  .google-btn:hover {
+}
+
+.google-btn:hover {
     background-color: #f0f0f0;
-  }
-  
-  a.sign-up {
+}
+
+a.sign-up {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -157,8 +144,8 @@ button.Forget{
     height: 40px;
     font-size: 14px;
     transition: 0.2s ease-in-out;
-  }
-  
-  a.sign-up:hover {
+}
+
+a.sign-up:hover {
     background-color: #a3e7dc;
-  }
+}
